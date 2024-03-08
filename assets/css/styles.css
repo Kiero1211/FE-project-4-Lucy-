@@ -2,10 +2,133 @@
     box-sizing: border-box;
  }
 
+:root {
+    --primary-color: #000958;  
+}
+
  html {
     font-size: 62.5%;
  }
 
  body {
     font-size: 1.6rem;
+    background: #FFFAF5;
+    font-family: 'Poppins', sans-serif;
  }
+
+ input,
+ button,
+ textarea {
+    font-size: inherit;
+    font-weight: inherit;
+ }
+
+ /* Common */
+ .content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ .btn {
+    --height: 56px;
+
+    display: inline-block;
+    color: var(--primary-color);
+    height: var(--height);
+    line-height: var(--height);
+
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+
+    border: 1px solid rgb(0, 9, 88, 0.7);
+    border-radius: 25px;
+ }
+
+ /* Header */
+.header {
+    background: #FFFAF5;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 26px 0;
+}
+
+ .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .navigations__list {
+    display: flex;
+    align-items: center;
+ }
+
+ .navigations__links,
+ .header__action__link {
+    color: #5E6085;
+    padding: 18px;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-weight: 500;
+ }
+
+ .navigations__links:hover,
+ .header__action__link:hover {
+    color: var(--primary-color);
+    text-shadow: 0.1px 0.1px 0.1px currentColor;
+ }
+ 
+ .header__action__btn {
+    --height: 50px;
+    min-width: 117px;
+ }
+
+ /* Hero */
+.hero {
+    padding-top: 100px;
+    height: 582px;
+}
+
+.images {
+    width: 52%;
+    position: relative;
+}
+
+.images__overlay {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.images__overlay.large {
+    width: 388px;
+    height: 488px;
+    background: #FE997B;
+    border: 3px solid #FFF;
+}
+
+.images__overlay.small {
+    width: 186px;
+    height: 244px;
+    background: #FAA7AD;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+}
+
+.overlay__thumb {
+    position: absolute;
+    bottom: 0;
+}
+
+.hero .info {
+    width: 44%;
+}
+
