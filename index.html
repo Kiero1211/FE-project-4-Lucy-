@@ -51,23 +51,60 @@
     <main style="height: 10000px;">
         <div class="hero">
             <div class="content">
-                <div class="images">
-                    <div class="images__overlay large">
-                        <img src="./assets/img/cat-thumb.png" alt="Cat pet" class="overlay__thumb">
-                    </div>
-                    <div class="images__overlay small">
-                        <img src="./assets/img/dog-thumb.png" alt="Dog pet" class="overlay__thumb">
-                    </div>
-                </div>
-                <div class="info">
-                    <h1 class="title">Established & Trusted Pet Care Service</h1>
-                    <p class="desc">Discover a wide variety of Pawsitive services to choose from, including daycare, private walks, office duty and spa.</p>
-                    <div class="cta">
-                        <div class="booking-btn">
-                            <a href="#!" class="btn">Book a Meet</a>
-                            <span class="icon"></span>
+                <div class="hero__inner">
+                    <div class="hero__media">
+                        <div class="media__overlay large">
+                            <img src="./assets/img/cat-thumb.png" alt="Cat pet" class="overlay__thumb">
+
+                            <!-- Decorators -->
+                            <img src="./assets/img/deco-1.svg" alt="Cat pet" class="overlay__decoration left">
+                            <img src="./assets/img/deco-2.svg" alt="Cat pet" class="overlay__decoration right">
                         </div>
-                        <a href="#!" class="schedule">Schedule a Call</a>
+                        <div class="media__overlay small">
+                            <img src="./assets/img/dog-thumb.png" alt="Dog pet" class="overlay__thumb">
+                        </div>
+
+                        <!-- Pet Modal -->
+                        <div class="media__modal">
+                            <section>
+                                <div class="avatar">
+                                    <img src="./assets/img/pet-modal-1.png" alt="Dog pet">
+                                </div>
+                                <div class="modal_info">
+                                    <h3 class="title">Pet health</h3>
+                                    <div class="desc">
+                                        <span class="long"></span>
+                                        <span class="short"></span>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="modal__seperate"></div>
+                            <section>
+                                <div class="avatar">
+                                    <img src="./assets/img/pet-modal-2.png" alt="Dog pet">
+                                </div>
+                                <div class="modal_info">
+                                    <h3 class="title">Pet care</h3>
+                                    <div class="desc">
+                                        <span class="long"></span>
+                                        <span class="short"></span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="hero-info">
+                        <h1 class="hero-info__title">Established & Trusted Pet Care Service</h1>
+                        <p class="hero-info__desc">Discover a wide variety of Pawsitive services to choose from, including daycare, private walks, office duty and spa.</p>
+                        <div class="hero-info__cta">
+                            <a href="#!" class="booking__btn btn">
+                                <span class="booking__content">Book a meet</span>
+                                <div class="booking__icon">
+                                    <span></span>
+                                </div>
+                            </a>
+                            <a href="#!" class="hero-info__schedule">Schedule a Call</a>
+                        </div>
                     </div>
                 </div>
             </div>
