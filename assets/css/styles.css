@@ -52,6 +52,28 @@
    border-radius: 25px;
  }
 
+ .check-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 24px;
+   height: 24px;
+   background-color: #FF5D31;
+   border-radius: 5px;
+   transition: box-shadow 0.2s;
+ }
+
+
+ .check-box span {
+   width: 8px;
+   height: 13px;
+   border: 2px solid #FFF2E5;
+   border-color: transparent #FFF2E5 #FFF2E5 transparent;
+   rotate: 45deg;
+   border-radius: 1.5px;
+   translate: 0 -15%;
+ }
+
  /* Header */
 .header {
    background: #FFFAF5;
@@ -107,6 +129,7 @@
    width: 50%;
    position: relative;
    display: flex;
+   padding-bottom: 94px;
 }
 
 .media__overlay {
@@ -168,7 +191,7 @@
 .media__modal {
    position: absolute;
    left: 129px;
-   bottom: -94px;
+   bottom: 0;
 
    width: 250px;
    display: inline-block;
@@ -283,18 +306,18 @@ section:last-child .avatar{
    min-width: 189px;
    background-color: #FF5B2E;
    border: none;
-   box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 
 
    display: flex;
    align-items: center;
    justify-content: center;
 
-   transition: translate 0.3s;
+   transition: translate 0.3s, box-shadow 0.3s;
 }
 
 .booking__btn:hover {
    translate: 0 -10px;
+   box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
 .booking__content {
@@ -339,6 +362,150 @@ section:last-child .avatar{
 .hero-info__schedule:hover {
    text-decoration: underline;
 }
+
+/* ==============About============== */
+
+/* About info */
+.about {
+   margin-top: 77px;
+   padding: 130px 0;
+}
+
+.about__inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.about-info {
+   width: 40.71%;
+}
+
+.about-info__sub-title {
+   color: #5E6085;
+   font-family: Sora;
+   font-size: 1.6rem;
+   font-weight: 600;
+}
+
+.about-info__title {
+   margin-top: 15px;
+   color: #000958;
+   font-family: Sora;
+   font-size: 5.2rem;
+   font-weight: 700;
+   line-height: 119.231%;
+}
+
+.about-info__desc {
+   margin-top: 24px;
+   width: 431px;
+   color: #656689;
+   font-size: 1,6rem;
+   font-weight: 400;
+   line-height: 187.5%;
+}
+
+.info-checklist {
+   margin-top: 54px;
+   display: grid;
+   grid-template-columns: auto auto;
+   row-gap: 34px;
+   justify-content: space-between;
+}
+
+.info-checklist-item {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.info-checklist-item:hover .check-box {
+   box-shadow: 0px 5px 10px -4px rgba(255, 91, 46, 1);
+} 
+
+.info-checklist-item__criteria {
+   color: #48496A;
+   font-size: 1.8rem;
+   font-weight: 500;
+}
+
+/* About media */
+
+.about-media {
+   display: flex;
+}
+
+.about-media__modal {
+   position: absolute;
+   left: -92px;
+   top: -58px;
+
+   width: 136px;
+   height: 156px;
+   padding: 0 26px;
+   border-radius: 10px;
+   background: #5BD6E2;
+   text-align: center;
+   box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+}
+
+.about-media__modal .modal__deco {
+   position: absolute;
+   top: -40px;
+   right: -34px;
+}
+
+.about-media__modal .modal__title {
+   margin-top: 31px;
+   color: #FFF;
+   font-family: Sora;
+   font-size: 4.2rem;
+   font-weight: 700;
+}
+
+.about-media__modal .modal__content {
+   margin-top: 14px;
+   color: #C6F4F9;
+   font-size: 1.4rem;
+   font-weight: 400;
+   line-height: 142.857%;
+}
+
+
+.about-media__container {
+   position: relative;
+   height: 559px;
+   display: flex;
+   align-items: flex-end;
+
+}
+
+.about-media__background {
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   object-fit: cover;
+
+   width: 494px;
+   height: 60%;
+
+   border-radius: 16px;
+   background: linear-gradient(180deg, #FCE0EF 0%, #FAC3D1 100%);
+   position: relative;
+}
+
+.about-media__deco {
+   position: absolute;
+   right: -51px;
+   top: 157px;
+}
+
+.about-media__thumb {
+   position: absolute;
+   bottom: 0;
+}
+
 
 
 
