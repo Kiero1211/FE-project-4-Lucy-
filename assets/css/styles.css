@@ -372,13 +372,14 @@ section:last-child .avatar{
 }
 
 .about__inner {
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
    align-items: center;
 }
 
-.about-info {
-   width: 40.71%;
+.about-info__desc,
+.about-info__title {
+   width: 444px;
 }
 
 .about-info__sub-title {
@@ -410,8 +411,8 @@ section:last-child .avatar{
    margin-top: 54px;
    display: grid;
    grid-template-columns: auto auto;
-   row-gap: 34px;
-   justify-content: space-between;
+   gap: 36px;
+   justify-content: flex-start;
 }
 
 .info-checklist-item {
