@@ -183,36 +183,67 @@
                         </figure>
                     </div>
                     <section class="about-info-second">
-                        <h2 class="about-info-second__title section-heading">Taking A Vacation?
-                            So Is Your Pet.</h2>
+                        <h2 class="about-info-second__title section-heading">Taking A Vacation? So Is Your Pet.</h2>
                         <p class="about-info-second__desc">We offer long-term and short-term boarding. Every dog has its own private, spacious room and daily individual time in our large play yard.</p>
                         <div class="module-tab">
                             <div class="button-group">
-                                <button class="module-tabe__item">
-                                    <img src="./assets/img/button-icon-1.svg" alt="" class="button-icon">
+                                <button class="module-tab__item active">
+                                    <div class="icon-wrapper"><img src="./assets/img/button-icon-1.svg" alt="" class="button-icon"></div>
                                     Pet Boarding
                                 </button>
-                                <button class="module-tabe__item">
-                                    <img src="./assets/img/button-icon-2.svg" alt="" class="button-icon">
+                                <button class="module-tab__item">
+                                    <div class="icon-wrapper"><img src="./assets/img/button-icon-2.svg" alt="" class="button-icon"></div>
                                     Pet Daycare
                                 </button>
-                                <button class="module-tabe__item">
-                                    <img src="./assets/img/button-icon-3.svg" alt="" class="button-icon">
+                                <button class="module-tab__item">
+                                    <div class="icon-wrapper"><img src="./assets/img/button-icon-3.svg" alt="" class="button-icon"></div>
                                     Pet Transport
                                 </button>
                             </div>
                             <div class="progress-line"></div>
-                            <div class="module-info">
-                                <p class="module-info__content">While you're on holiday, here's where your furry friends will spend their time.</p>
-                                <p class="module-info__content">While you're on holiday, here's where your furry friends will spend their time.</p>
-                                <p class="module-info__content">While you're on holiday, here's where your furry friends will spend their time.</p>
-                            </div>
                         </div>
+                        <div class="module-info">
+                            <p class="module-info__content line-clamp active">While you're on holiday, here's where your furry friends will spend their time.</p>
+                            <p class="module-info__content line-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, corporis!</p>
+                            <p class="module-info__content line-clamp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo obcaecati at dolorem?</p>
+                        </div>
+                        <a class="about-cta">View more</a>
 
                     </section>
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const tabs = $$(".module-tab__item");
+        const panes = $$(".module-info__content");
+
+        const tabActive =  $(".module-tab__item.active");
+
+        const line = $(".progress-line");
+        requestIdleCallback(function () {
+        line.style.left = tabActive.offsetLeft + "px";
+        line.style.width = tabActive.offsetWidth + "px";
+        });
+
+        tabs.forEach(function(tab, index) {
+            const pane = panes[index];
+            tab.onclick = function() {
+                $(".module-tab__item.active").classList.remove('active');
+                $(".module-info__content.active").classList.remove('active');
+
+                line.style.left = this.offsetLeft + "px";
+                line.style.width = this.offsetWidth + "px";
+                
+                this.classList.add('active');
+                pane.classList.add('active')
+                console.log(pane);
+            }
+        })
+    </script>
 </body>
 </html>

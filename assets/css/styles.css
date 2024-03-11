@@ -22,9 +22,18 @@
  textarea {
    font-size: inherit;
    font-weight: inherit;
+   border: none;
+   background-color: transparent;
  }
 
  /* Common */
+.line-clamp {
+   display: -webkit-box;
+   -webkit-line-clamp: var(--line-clamp, 2);
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+
  .content {
    width: 1170px;
    max-width: calc(100% - 48px);
@@ -597,5 +606,142 @@ section:last-child .avatar{
    right: -57px;
 }
 
+.about-info-second__title {
+   width: 543px;
+}
 
+.about-info-second__desc {
+   width: 511px;
+   margin-top: 24px;
+   color: var(--desc-color);
+   font-size: 1.6rem;
+   font-weight: 400;
+   line-height: 187.5%;
+}
 
+.module-tab {
+   position: relative;
+   margin-top: 52px;
+   width: 571px;  
+}
+
+.button-group {
+   display: flex;
+}
+
+.module-tab__item {
+   display: flex;
+   align-items: center;
+   padding: 0 28px;
+
+   color: #48496A;
+   font-family: Sora;
+   font-size: 1.8rem;
+   font-weight: 600;
+   position: relative;
+
+   padding-bottom: 14px;
+   border-bottom: 3px solid transparent;
+   cursor: pointer;
+
+   opacity: 0.7;
+
+   transition: all 0.3s ease;
+}
+
+.module-tab__item::after {
+   content: '';
+   position: absolute;
+   left: 0; 
+   bottom: -3px;
+
+   width: 100%;
+   height: 3px;
+   background: #FF5B2E;
+   opacity: 0.07;
+}
+
+.module-tab__item:hover {
+   border-bottom-color: #ffeee7;
+   opacity: 1;
+}
+
+.module-tab__item.active {
+   opacity: 1;
+}
+
+.module-tab__item:first-child {
+   padding-left: 0;
+}
+
+.module-tab__item:last-child {
+   padding-right: 0;
+}
+
+.module-tab__item .icon-wrapper {
+   width: 20px;
+   height: 20px;
+   object-fit: cover;
+
+   margin-right: 10px;
+}
+
+.module-tab__item .button-icon {
+   width: 100%;
+   height: 100%;
+}
+
+.progress-line {
+   position: absolute;
+   left: 0; 
+   bottom: 0;
+   width: 0;
+   height: 3px;
+   background: #FF5B2E;
+   transition: all 0.3s ease;
+}
+
+.module-info {
+   margin-top: 36px;
+   width: 391px;
+}
+
+.module-info__content {
+   width: 100%;
+   color: #656689;
+   font-size: 1.4rem;
+   font-weight: 400;
+   line-height: 171.429%;
+   display: none;
+}
+
+.module-info__content.active {
+   display: block;
+}
+
+.about-cta {
+   display: inline-block;
+   position: relative;
+   margin-top: 32px;
+   color: #FF5D31;
+   font-size: 1.6rem;
+   font-weight: 500;
+   cursor: pointer;
+}
+
+.about-cta::after {
+   position: absolute;
+   content: '';
+   left: 0;
+   bottom: -5px;
+
+   width: 0;
+   height: 1.5px;
+   background-color: #FF5D31;
+   border-radius: 99px;
+   transition: width 0.25s ease;
+}
+
+.about-cta:hover::after {
+   width: 100%;
+}
