@@ -4,6 +4,7 @@
 
 :root {
    --primary-color: #000958;  
+   --desc-color: #656689;
 }
 
  html {
@@ -72,6 +73,14 @@
    rotate: 45deg;
    border-radius: 1.5px;
    translate: 0 -15%;
+ }
+
+ .section-heading {
+   color: var(--primary-color);
+   font-family: Sora;
+   font-size: 5.2rem;
+   font-weight: 700;
+   line-height: 119.231%;
  }
 
  /* Header */
@@ -258,7 +267,7 @@ section:last-child .avatar{
    display: block;
    border-radius: 10px;
    opacity: 0.08;
-   background: #000958;
+   background: var(--primary-color);
    height: 4px;
 }
 
@@ -277,7 +286,7 @@ section:last-child .avatar{
 }
 
 .hero-info__title {
-   color: #000958;
+   color: var(--primary-color);
    font-family: Sora;
    font-size: 6.6rem;
    font-weight: 800;
@@ -287,7 +296,7 @@ section:last-child .avatar{
 .hero-info__desc {
    margin-top: 24px;
    width: 391px;
-   color: #656689;
+   color: var(--desc-color);
    font-family: Poppins;
    font-size: 1.6rem;
    font-weight: 400;
@@ -354,7 +363,7 @@ section:last-child .avatar{
 }
 
 .hero-info__schedule {
-   color: #000958;
+   color: var(--primary-color);
    font-size: 1.6rem;
    font-weight: 500;
 }
@@ -368,12 +377,13 @@ section:last-child .avatar{
 /* About info */
 .about {
    margin-top: 77px;
-   padding: 130px 0;
+   padding: 53px 0;
 }
 
 .about__inner {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: auto auto;
+   justify-content: space-between;
    align-items: center;
 }
 
@@ -389,19 +399,11 @@ section:last-child .avatar{
    font-weight: 600;
 }
 
-.about-info__title {
-   margin-top: 15px;
-   color: #000958;
-   font-family: Sora;
-   font-size: 5.2rem;
-   font-weight: 700;
-   line-height: 119.231%;
-}
 
 .about-info__desc {
    margin-top: 24px;
    width: 431px;
-   color: #656689;
+   color: var(--desc-color);
    font-size: 1,6rem;
    font-weight: 400;
    line-height: 187.5%;
@@ -428,7 +430,7 @@ section:last-child .avatar{
 .info-checklist-item__criteria {
    color: #48496A;
    font-size: 1.8rem;
-   font-weight: 500;
+   font-weight: 400;
 }
 
 /* About media */
@@ -458,6 +460,7 @@ section:last-child .avatar{
 }
 
 .about-media__modal .modal__title {
+   display: block;
    margin-top: 31px;
    color: #FFF;
    font-family: Sora;
@@ -467,7 +470,7 @@ section:last-child .avatar{
 
 .about-media__modal .modal__content {
    margin-top: 14px;
-   color: #C6F4F9;
+   color: #d0f6fa;
    font-size: 1.4rem;
    font-weight: 400;
    line-height: 142.857%;
