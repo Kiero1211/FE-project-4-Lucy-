@@ -92,6 +92,26 @@
    line-height: 119.231%;
  }
 
+ .section-desc {
+   color: var(--desc-color);
+   font-size: 1.4rem;
+   font-weight: 400;
+ }
+
+ .sub-section-heading {
+   color: var(--primary-color);
+   font-family: Sora;
+   font-size: 2.2rem;
+   font-weight: 600;
+ }
+
+ .sub-section-desc {
+   color: var(--desc-color);
+   font-size: 1.4rem;
+   font-weight: 400;
+   line-height: 171.429%;
+ }
+
  /* Header */
 .header {
    background: #FFFAF5;
@@ -744,4 +764,110 @@ section:last-child .avatar{
 
 .about-cta:hover::after {
    width: 100%;
+}
+
+/* =================Services================= */
+.services {
+   background: #FFF6ED;
+   margin-top: 130px;
+}
+
+.services__inner {
+   padding: 68px 0 100px 0;
+}
+
+.services__label {
+   color: #5E6085;
+   font-family: Sora;
+   font-size: 1.6rem;
+   font-weight: 600;
+   text-align: center;
+}
+
+.services__heading {
+   margin-top: 15px;
+   text-align: center;
+}
+
+.services__list {
+   margin-top: 31px;
+
+   display: grid;
+   grid-template-columns: 294px 1fr 294px;
+   gap: 24px 71px;
+   grid-template-areas: 
+      "item1 img item2"
+      "item3 img item4"
+      "item5 img item6";
+
+}
+
+.services__item {
+   width: 294px;
+   height: 208px;
+   border-radius: 10px;
+   border: 2px solid rgba(255, 188, 122, 0.26);
+   background: #FFF;
+   padding: 30px 22px 30px 28px;
+}
+
+.services__list .services__item:first-child {
+   grid-area: item1;
+}
+.services__list .services__item:nth-child(2) {
+   grid-area: item2;
+}
+.services__list .services__item:nth-child(3) {
+   grid-area: item3;
+}
+.services__list .services__item:nth-child(4) {
+   grid-area: item4;
+}
+.services__list .services__item:nth-child(5) {
+   grid-area: item5;
+}
+.services__list .services__item:nth-child(6) {
+   grid-area: item6;
+}
+
+.services__cta {
+   grid-area: img;
+   text-align: center;
+   
+}
+
+.services__list .img-wrapper {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   height: 650px;
+}
+
+.services__list .img-wrapper::before {
+   position: absolute;
+   content: '';
+   width: calc(100% - 30px);
+   height: 53%;
+   bottom: 0;
+
+   border-radius: 10px;
+   background: linear-gradient(180deg, #9DF1FB 0%, #73D0DB 108.14%);
+   z-index: 1;
+}
+
+.services__thumb {
+   width: 100%;
+   object-fit: cover;
+   z-index: 2;
+}
+
+.services__link {
+   margin-top: 45px;
+}
+
+
+
+.services__title {
+
 }
