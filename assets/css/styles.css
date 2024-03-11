@@ -382,14 +382,18 @@ section:last-child .avatar{
 
 .about__inner {
    display: grid;
-   grid-template-columns: auto auto;
-   justify-content: space-between;
+   grid-template-columns: 1fr 1fr;
    align-items: center;
+   row-gap: 146px;
 }
 
 .about-info__desc,
 .about-info__title {
    width: 444px;
+}
+
+.about-info__title {
+   margin-top: 15px;
 }
 
 .about-info__sub-title {
@@ -436,7 +440,7 @@ section:last-child .avatar{
 /* About media */
 
 .about-media {
-   display: flex;
+   margin-left: auto;
 }
 
 .about-media__modal {
@@ -479,6 +483,7 @@ section:last-child .avatar{
 
 .about-media__container {
    position: relative;
+   width: 494px;
    height: 559px;
    display: flex;
    align-items: flex-end;
@@ -510,6 +515,87 @@ section:last-child .avatar{
    bottom: 0;
 }
 
+.about-media-second__container {
+   position: relative;
+   width: 458px;
+}
+
+.about-media-second .img-wrapper {
+   position: relative;
+   height: 500px;
+   overflow: hidden;
+
+   border-radius: 18px;
+   border: 2px solid #FFF;
+   background: linear-gradient(180deg, #C6E2FA 0%, #94C2EA 100%);
+   box-shadow: 0px 17px 77px -8px rgba(190, 165, 139, 0.17);
+
+   object-fit: cover;
+   z-index: -1;
+}
+
+.about-media-second__container .thumb {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   border-radius: inherit;
+   z-index: 2;
+}
+
+.about-media-second__container .shadow-1 {
+   position: absolute;
+   bottom: 47px;
+   left: 17px;
+   z-index: 1;
+   fill: #4076A2;
+   filter: blur(16px);
+}
+
+.about-media-second__container .shadow-2 {
+   position: absolute;
+   bottom: 50px;
+   right: 69px;
+   fill: rgba(64, 118, 162, 0.27);
+   filter: blur(16px);
+   transform: rotate(13.72deg);
+}
+
+
+.deco-group-1 .deco:first-child {
+   position: absolute;
+   top: 12px;
+   right: 55px;
+}
+
+.deco-group-1 .deco:nth-child(2) {
+   position: absolute;
+   top: -16px;
+   right: 11px;
+}
+
+.deco-group-1 .deco:last-child{
+   position: absolute;
+   top: 32px;
+   right: -22px;
+}
+
+.deco-group-2 .deco:first-child {
+   position: absolute;
+   right: -33px;
+   top: 268px;
+}
+
+.deco-group-2 .deco:last-child {
+   position: absolute;
+   right: 13px;
+   top: 336px;
+}
+
+.spriral-deco {
+   position: absolute;
+   bottom: -55px;
+   right: -57px;
+}
 
 
 
