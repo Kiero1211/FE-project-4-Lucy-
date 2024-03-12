@@ -923,14 +923,13 @@ section:last-child .avatar{
 }
 
 .staff__list {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 35px;
+   margin-top: 45px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: 35px;
 }
 
 .staff__item {
-   width: 25%;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -938,31 +937,37 @@ section:last-child .avatar{
 
 .item__media {
    position: relative;
-   display: flex;
-   justify-content: center;
-
-   width: 234px;
-   height: 300px;
+   margin: 0 16px;
+   border-radius: 130px;
 }
 
 .item__media::before {
    content: '';
    position: absolute;
    bottom: 0;
+   border-radius: inherit;
 
    width: 100%;
-   height: 266px;
-   border-radius: 129.5px;
-   z-index: -1;
+   height: 95%;
 }
 
 .item__media::after {
+   content: '';
    position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+
+   display: inline-block;
+   width: calc(100% + 36px);
+   height: 100%;
+
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
 
 .staff__item:nth-child(1) .item__media::before {
    background: linear-gradient(180deg, #5BD6E2 0%, #00A7CC 100%);
-
 }
 .staff__item:nth-child(2) .item__media::before {
    background: linear-gradient(180deg, #FF997E 0%, #F3752E 100%);
@@ -975,27 +980,32 @@ section:last-child .avatar{
 }
 
 .staff__item:nth-child(1) .item__media::after {
-   content: url(../img/staff-deco-1.svg);
-   bottom: 0;
+   background-image: url(../img/staff-deco-1.svg);
 }
 .staff__item:nth-child(2) .item__media::after {
-   content: url(../img/staff-deco-2.svg);
-   top: 30px;
+   background-image: url(../img/staff-deco-2.svg);
 }
 .staff__item:nth-child(3) .item__media::after {
-   content: url(../img/staff-deco-3.svg);
-   bottom: 0;
+   background-image: url(../img/staff-deco-3.svg);
 }
 .staff__item:nth-child(4) .item__media::after {
-   content: url(../img/staff-deco-4.svg);
-   top: 30px;
+   background-image: url(../img/staff-deco-4.svg);
+}
+
+.staff__item:nth-child(even) .item__media::after {
+   background-position: 0 16px;
+}
+
+.staff__item:nth-child(odd) .item__media::after {
+   background-position: bottom;
 }
 
 .item__media__avatar {
+   position: relative;
    display: block;
    width: 100%;
-   object-fit: cover;
-   border-radius: 129.5px;
+   border-radius: inherit;
+   z-index: 1;
 }
 
 .item__info {
