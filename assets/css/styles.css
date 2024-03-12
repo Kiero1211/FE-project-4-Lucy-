@@ -1163,6 +1163,7 @@ section:last-child .avatar{
 
    border-radius: 39px;
    border: 1px solid rgba(255, 91, 46, 0.60);
+   transition: all 0.3s ease;
 }
 
 .deals-item__cta:hover {
@@ -1191,7 +1192,7 @@ section:last-child .avatar{
 .deals-item:nth-child(2) .check-item:nth-child(5) .check-icon,
 .deals-item:nth-child(2) .check-item:nth-child(6) .check-icon,
 .deals-item:nth-child(2) .check-item:nth-child(7) .check-icon {
-   opacity: 0.6;
+   opacity: 0.3;
 }
  
 /* =========== Review ============ */
