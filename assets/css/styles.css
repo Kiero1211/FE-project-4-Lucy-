@@ -6,6 +6,7 @@
    --primary-color: #000958;  
    --desc-color: #656689;
    --cta-color: #FF5B2E;
+   --box-shadow: 0px 5px 10px -4px rgba(255, 91, 46, 1);
 }
 
  html {
@@ -455,7 +456,7 @@ section:last-child .avatar{
 }
 
 .info-checklist-item:hover .check-box {
-   box-shadow: 0px 5px 10px -4px rgba(255, 91, 46, 1);
+   box-shadow: var(--box-shadow);
 } 
 
 .info-checklist-item__criteria {
@@ -1109,10 +1110,8 @@ section:last-child .avatar{
    pointer-events: none;
 }
 
-.price__body {
-   margin-top: 56px;
-}
 .price__deals {
+   padding: 0 81px;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    column-gap: 44px;
@@ -1186,7 +1185,6 @@ section:last-child .avatar{
    margin-top: 18px;
 }
 
-/* Item 1 */
 .deals-item:nth-child(1) .check-item:nth-child(5) .check-icon,
 .deals-item:nth-child(1) .check-item:nth-child(6) .check-icon,
 .deals-item:nth-child(1) .check-item:nth-child(7) .check-icon,
@@ -1196,4 +1194,102 @@ section:last-child .avatar{
    opacity: 0.6;
 }
  
+/* =========== Review ============ */
+.review {
+   padding-top: 32px;;
+}
 
+.review__wrapper {
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   align-items: center;
+}
+
+.review__select-arrow {
+   position: relative;
+   width: 54px;
+   height: 54px;
+   border: 2px solid rgba(255, 209, 196, 1);
+   border-radius: 50%;  
+   color: #ff5b2e;
+   transition: all 0.2s ease;
+   cursor: pointer;
+}
+
+.review__select-arrow:hover {
+   background-color: #ff5b2e;   
+   border-color: #ff5b2e;
+   color: #fff;
+   box-shadow: var(--box-shadow);
+}
+
+.review__inner {
+   margin: 0 82px;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+}
+
+.review__media {
+   position: relative;
+   width: 274px;
+   height: 427px;
+
+   border-radius: 140px;
+}
+
+.review__media::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+
+   width: 100%;
+   height: 80%;
+   background: #FFDA54;
+   border-radius: inherit;
+}
+
+.review__info {
+   margin-left: auto;
+   margin-top: 50px;
+}
+
+.review__thumb {
+   position: relative;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   border-radius: inherit;
+}
+
+
+.review__content {
+   width: 553px;
+   margin-top: 24px;
+   color: #000;
+   font-size: 1.8rem;
+   font-weight: 400;
+   line-height: 155.556%;
+}
+
+.reviewer {
+   margin: 34px 0 0 28px;
+   position: relative;
+   color: #282828;
+   font-family: Sora;
+   font-size: 1.8rem;
+   font-weight: 600;
+   line-height: 1;
+}
+
+.reviewer::before {
+   position: absolute;
+   display: inline-block;
+   content: '';
+   left: -28px;
+   top: 50%;
+
+   width: 20px;
+   height: 2px;
+   background-color: #000;
+}
