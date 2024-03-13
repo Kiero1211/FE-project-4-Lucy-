@@ -1437,6 +1437,7 @@ section:last-child .avatar{
 
 .footer__inner {
    display: flex;
+   justify-content: space-between;
 }
 
 .footer__social {
@@ -1506,5 +1507,32 @@ section:last-child .avatar{
    box-shadow: 0px 2px 9px -5px rgba(255, 91, 46, 0.7);
 }
 
+.footer__right {
+   padding-top: 52px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: space-between;
+   column-gap: 137px;
+}
+
+.column__title {
+   display: block;
+   margin-bottom: 20px;
+}
+
+.column__desc {
+   display: block;
+   margin-top: 14px;
+   white-space: nowrap;
+}
+
+.footer__copyright {
+   padding: 52px 0 48px 0;
+   text-align: center;
+   color: var(--desc-color);
+   font-size: 1.2rem;
+   font-weight: 400;
+   line-height: 116.667%;
+}
 
  
